@@ -1,11 +1,8 @@
 from fastapi import FastAPI
-from app.routers import auth
+
+from app.routes import post
+
+
 
 app = FastAPI()
-
-@app.get("/")
-async def read_root():
-    return {"message": "Hello, World!"}
-
-app.include_router(auth.router, prefix="/auth", tags=["auth"])
-
+app.include_router(post.router, prefix="/post", tags=["posts"])

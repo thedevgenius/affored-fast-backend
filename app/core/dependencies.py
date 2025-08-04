@@ -1,6 +1,6 @@
 from fastapi import Depends, HTTPException
 from jose import JWTError, jwt
-from app.utils.auth import SECRET_KEY, ALGORITHM
+from app.core.config import SECRET_KEY, ALGORITHM
 from fastapi.security import OAuth2PasswordBearer
 
 oauth2_scheme = OAuth2PasswordBearer(tokenUrl="verify-otp")

@@ -1,6 +1,5 @@
-# from app.database import engine, Base
-# from app.models.post import Post
-# from app.models.user import User
+from app.core.database import engine, Base
+from app.users.models import User
 
 
-# Base.metadata.create_all(bind=engine)
+Base.metadata.create_all(bind=engine)

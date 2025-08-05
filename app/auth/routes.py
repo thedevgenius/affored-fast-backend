@@ -101,6 +101,7 @@ async def verify_otp(data: UserCreate, response: Response, db: Session = Depends
 
     return response
 
+
 @router.get("/refresh-token", name='Generate New Access Token')
 async def refresh_token(request: Request):
     token = request.cookies.get("refresh_token")

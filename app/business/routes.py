@@ -7,7 +7,7 @@ from .schemas import BusinessCreate
 
 router = APIRouter()
 
-@router.post('/business/add', name='Add Business')
+@router.post('/add', name='Add Business')
 async def add_business(data: BusinessCreate, db: Session = Depends(get_db)):
     """Add a new business."""
     business = Business(

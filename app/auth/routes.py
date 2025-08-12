@@ -78,7 +78,7 @@ async def verify_otp(data: UserCreate, response: Response, db: Session = Depends
     refresh_token = create_refresh_token(data={"sub": phone})
 
     response = JSONResponse(
-        status_code=status.HTTP_201_CREATED,
+        status_code=status.HTTP_200_OK,
         content={
             'success': True,
             'message': "OTP verified successfully",
